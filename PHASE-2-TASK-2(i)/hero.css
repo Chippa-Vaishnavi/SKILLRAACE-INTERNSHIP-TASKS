@@ -1,0 +1,47 @@
+/* Reset margin and padding */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background-image: url('flower1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay effect */
+}
+
+.hero-title {
+    font-size: 3rem;
+    z-index: 1;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.btn-primary {
+    z-index: 1;
+}
+
+/* Ensure container is not obscured by overlay */
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
